@@ -1,9 +1,8 @@
 extends Node
 
-@onready var path_follow : PathFollow2D = $Path2D/PathFollow2D
-@export var speed = 5
-# Called when the node enters the scene tree for the first time.
+@onready var path_follow: PathFollow2D = $Path2D/PathFollow2D
+@export var speed: float = 5.0
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	path_follow.progress += speed + delta
+	# Wrap progress_ratio so it loops from 0 → 1 continuously
+	path_follow.progress_ratio = fmod(path_follow.progress_ratio + (speed * delta), 1.0)

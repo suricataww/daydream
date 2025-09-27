@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://drafgd6db0b5l"]
+[gd_scene load_steps=15 format=3 uid="uid://drafgd6db0b5l"]
 
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_og30x"]
+[ext_resource type="Texture2D" uid="uid://4rjmt3q6u57w" path="res://download.png" id="1_wjvqw"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="2_7xuih"]
 [ext_resource type="PackedScene" uid="uid://bwcoipq3smmub" path="res://player.tscn" id="3_7xuih"]
 [ext_resource type="PackedScene" uid="uid://cnyss0vs2tak1" path="res://parallax_background.tscn" id="4_lwmgr"]
@@ -37,8 +38,13 @@ point_count = 4
 [node name="Nivel2" type="Node2D"]
 position = Vector2(-154, -39)
 
+[node name="ColorRect2" type="Sprite2D" parent="."]
+position = Vector2(190, 289)
+scale = Vector2(-0.1655964, 0.8871182)
+texture = ExtResource("1_wjvqw")
+
 [node name="Node2D" parent="." instance=ExtResource("3_7xuih")]
-position = Vector2(121, -129)
+position = Vector2(188, -127)
 
 [node name="ParallaxBackground" parent="Node2D" instance=ExtResource("4_lwmgr")]
 
@@ -139,8 +145,6 @@ scale = Vector2(6.3042927, 0.74928653)
 [node name="StaticBody2D16" parent="platforms" instance=ExtResource("2_7xuih")]
 position = Vector2(1159, 1035)
 scale = Vector2(1.8731887, 1.7081095)
-
-[node name="ColorRect" type="Sprite2D" parent="."]
 
 [node name="ciuperca 1" type="Node" parent="."]
 script = ExtResource("5_c8tpp")
