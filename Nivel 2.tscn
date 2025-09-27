@@ -151,20 +151,22 @@ scale = Vector2(6.3042927, 0.74928653)
 position = Vector2(1313, 1074)
 scale = Vector2(1.8731887, 1.7081095)
 
-[node name="ciuperca 1" type="Node" parent="."]
+[node name="ciuperca1" type="Node" parent="."]
 script = ExtResource("5_c8tpp")
+speed = null
 
-[node name="Path2D" type="Path2D" parent="ciuperca 1"]
+[node name="Path2D" type="Path2D" parent="ciuperca1"]
 curve = SubResource("Curve2D_2pc3p")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="ciuperca 1/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="ciuperca1/Path2D"]
 position = Vector2(744, 404)
 rotation = -0.011967514
 rotates = false
 
-[node name="ciuperca" parent="ciuperca 1/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+[node name="ciuperca" parent="ciuperca1/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
 position = Vector2(4.143322, -11.951275)
 scale = Vector2(0.62712836, 0.569552)
+speed = null
 
 [node name="ciuperca2" type="Node" parent="."]
 script = ExtResource("7_2pc3p")
@@ -181,6 +183,7 @@ rotates = false
 position = Vector2(-16.04248, 6.902237)
 rotation = -0.005863824
 scale = Vector2(0.6271285, 0.56955206)
+speed = null
 
 [node name="ciuperca3" type="Node" parent="."]
 script = ExtResource("8_plmuo")
@@ -198,6 +201,10 @@ script = ExtResource("7_2pc3p")
 position = Vector2(11.01712, -7.976391)
 rotation = 3.131771
 scale = Vector2(0.6271285, 0.5695521)
+speed = null
+
+[node name="respawn2" type="Node2D" parent="."]
+position = Vector2(280, 472)
 
 [node name="ciuperca4" type="Node" parent="."]
 script = ExtResource("9_wjvqw")
@@ -206,12 +213,12 @@ script = ExtResource("9_wjvqw")
 curve = SubResource("Curve2D_wjvqw")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="ciuperca4/Path2D"]
-position = Vector2(2556.7322, 1055.9282)
+position = Vector2(2311, 1052)
 rotation = 0.015984429
-progress = 245.76392
 rotates = false
 
-[node name="ciuperca4" parent="ciuperca4/Path2D" instance=ExtResource("5_tenic")]
-position = Vector2(2313.0002, 1064)
-rotation = -0.011967484
-scale = Vector2(0.6271285, 0.5695521)
+[node name="ciuperca4" parent="ciuperca4/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+position = Vector2(2.1916504, 11.966553)
+rotation = -0.027951915
+scale = Vector2(0.6271285, 0.5695522)
+speed = null

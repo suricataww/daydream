@@ -1,14 +1,18 @@
 extends Node
 
-@onready var path_follow : PathFollow2D = $Path2D/PathFollow2D
-@export var speed = 5
-# Called when the node enters the scene tree for the first time.
+@onready var path_follow: PathFollow2D = $/root/Nivel2/ciuperca1/Path2D/PathFollow2D
+@onready var path: Path2D = $/root/Nivel2/ciuperca1/Path2D
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+@export var speed: float = 100.0
+
 func _process(delta: float) -> void:
-	path_follow.progress += speed + delta
+	if path and path.curve:
+		var length: float = path.curve.get_baked_length()
+		path_follow.progress = fmod(path_follow.progress + speed * delta, length)
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group('jucator'):
-		body.killPlayer()
+func _on_area_2d_body_entered(body: Node) -> void:
+	if body.is_in_group("Player"):
+		if body.has_method("killPlayer"):
+			body.killPlayer()
+		else:
+			print("killPlayer() not found on Player")
