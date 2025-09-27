@@ -1,9 +1,9 @@
 extends Path2D
 
-@onready var path_follow : PathFollow2D = $Path2D/PathFollow2D
-#will be speed in px per second
-@export var speed = 100
+@onready var path_follow: PathFollow2D = $PathFollow2D
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Viteza în pixeli pe secundă
+@export var speed: float = 324.0
+
 func _process(delta: float) -> void:
-	path_follow.progress += speed + delta 
+	path_follow.progress += speed * delta
