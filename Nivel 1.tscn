@@ -37,8 +37,8 @@ scale = Vector2(1.0759429, 1.0909091)
 texture = ExtResource("1_1boc4")
 
 [node name="Screenshot20250927135255" type="Sprite2D" parent="."]
-position = Vector2(574.25, -327.99997)
-scale = Vector2(1.1799184, 1.090909)
+position = Vector2(1647.7499, 3.0517578e-05)
+scale = Vector2(3.3685014, 2.195286)
 texture = ExtResource("1_1boc4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -48,12 +48,12 @@ scale = Vector2(0.13622618, -0.67796206)
 texture = ExtResource("2_oyj17")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_oyj17")]
-position = Vector2(74, 459)
+position = Vector2(59, 479)
 
 [node name="platforms" type="Node" parent="."]
 
 [node name="Node2D2" parent="platforms" instance=ExtResource("4_suadl")]
-position = Vector2(10, 529)
+position = Vector2(2, 529)
 scale = Vector2(1.3571428, 1.6530613)
 
 [node name="Node2D3" parent="platforms" instance=ExtResource("4_suadl")]

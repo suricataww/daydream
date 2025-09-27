@@ -14,7 +14,7 @@ _data = {
 point_count = 63
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tecg2"]
-size = Vector2(105.86665, 20)
+size = Vector2(105.86665, 34.966236)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_piiay"]
 size = Vector2(44, 303)
@@ -192,7 +192,7 @@ position = Vector2(5016, -314)
 [node name="Node2D27" parent="." instance=ExtResource("3_tecg2")]
 position = Vector2(4585, -224)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_ytp32")]
+[node name="Player" parent="." instance=ExtResource("3_ytp32")]
 position = Vector2(120, 388)
 
 [node name="Node" type="Node" parent="."]
@@ -214,7 +214,7 @@ scale = Vector2(0.11453474, 0.11055692)
 [node name="deathzone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathzone"]
-position = Vector2(5119, 608)
+position = Vector2(5119, 578.3268)
 scale = Vector2(29.944193, 3.965354)
 shape = SubResource("RectangleShape2D_tecg2")
 
@@ -231,6 +231,6 @@ script = ExtResource("6_ytp32")
 position = Vector2(2787, -563)
 shape = SubResource("RectangleShape2D_o5eqi")
 
-[connection signal="body_entered" from="deathzone" to="CharacterBody2D" method="_on_deathzone_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_2_body_entered"]
-[connection signal="body_exited" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_2_body_exited"]
+[connection signal="body_entered" from="deathzone" to="Player" method="_on_deathzone_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Player" method="_on_area_2d_2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="Player" method="_on_area_2d_2_body_exited"]

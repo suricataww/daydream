@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://drafgd6db0b5l"]
+[gd_scene load_steps=18 format=3 uid="uid://drafgd6db0b5l"]
 
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_og30x"]
 [ext_resource type="Texture2D" uid="uid://4rjmt3q6u57w" path="res://download.png" id="1_wjvqw"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://dhsaakq7wsg3" path="res://ciuperca_3.gd" id="8_plmuo"]
 [ext_resource type="Script" uid="uid://cuc33pvx8o76i" path="res://ciuperca_4.gd" id="9_wjvqw"]
 [ext_resource type="Script" uid="uid://deph2qawyniu3" path="res://area_2d.gd" id="10_wjvqw"]
+[ext_resource type="Texture2D" uid="uid://d267appj1ucxx" path="res://image-removebg-preview (10).png" id="11_h1ynw"]
 
 [sub_resource type="Curve2D" id="Curve2D_2pc3p"]
 _data = {
@@ -37,6 +38,10 @@ point_count = 4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h1ynw"]
 size = Vector2(1150.648, 745.0581)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jq2hg"]
+radius = 173.36426
+height = 356.19922
 
 [node name="Nivel2" type="Node2D"]
 position = Vector2(-154, -39)
@@ -122,10 +127,6 @@ scale = Vector2(1.2517389, 1.755557)
 [node name="StaticBody2D8" parent="." instance=ExtResource("2_7xuih")]
 position = Vector2(3563, 505)
 scale = Vector2(1.9956305, 0.6879885)
-
-[node name="StaticBody2D9" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(4466, 236)
-scale = Vector2(0.9282106, 5.6686287)
 
 [node name="StaticBody2D10" parent="." instance=ExtResource("2_7xuih")]
 position = Vector2(4137, 555)
@@ -235,6 +236,17 @@ shape = SubResource("RectangleShape2D_h1ynw")
 position = Vector2(1353, 941)
 scale = Vector2(0.11384879, 0.40936399)
 texture = ExtResource("1_wjvqw")
+
+[node name="ImageRemovebgPreview(10)" type="Sprite2D" parent="."]
+position = Vector2(4607.25, 496.5)
+scale = Vector2(1.2280922, 1.7874252)
+texture = ExtResource("11_h1ynw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ImageRemovebgPreview(10)"]
+position = Vector2(47.838417, -1.3986607)
+rotation = -3.4732053
+skew = -0.43633232
+shape = SubResource("CapsuleShape2D_jq2hg")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_area_2d_body_exited"]

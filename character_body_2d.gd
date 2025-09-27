@@ -37,17 +37,5 @@ func _ready():
 		killPlayer()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group('jucator'):
+	if body.is_in_group('Player'):
 		body.killPlayer()
-
-
-func _on_area_2d_2_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
-func _on_area_2d_2_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
-func _on_deathzone_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
