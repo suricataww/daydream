@@ -162,10 +162,9 @@ position = Vector2(744, 404)
 rotation = -0.011967514
 rotates = false
 
-[node name="Node2D2" parent="ciuperca 1/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
-position = Vector2(21.321655, -26.74675)
-rotation = 0.011967514
-scale = Vector2(0.45741773, 0.39616248)
+[node name="ciuperca" parent="ciuperca 1/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+position = Vector2(4.143322, -11.951275)
+scale = Vector2(0.62712836, 0.569552)
 
 [node name="ciuperca2" type="Node" parent="."]
 script = ExtResource("7_2pc3p")
@@ -178,10 +177,10 @@ position = Vector2(1950, 470)
 rotation = -0.0061036884
 rotates = false
 
-[node name="Node2D3" parent="ciuperca2/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
-position = Vector2(-0.96313477, -6.006012)
-rotation = 0.006103689
-scale = Vector2(0.45741776, 0.3961625)
+[node name="ciuperca2" parent="ciuperca2/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+position = Vector2(-16.04248, 6.902237)
+rotation = -0.005863824
+scale = Vector2(0.6271285, 0.56955206)
 
 [node name="ciuperca3" type="Node" parent="."]
 script = ExtResource("8_plmuo")
@@ -195,10 +194,10 @@ rotation = 3.1394467
 rotates = false
 script = ExtResource("7_2pc3p")
 
-[node name="Node2D4" parent="ciuperca3/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
-position = Vector2(28.978638, 10.062195)
-rotation = -3.1394467
-scale = Vector2(0.45741782, 0.39616254)
+[node name="ciuperca3" parent="ciuperca3/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+position = Vector2(11.01712, -7.976391)
+rotation = 3.131771
+scale = Vector2(0.6271285, 0.5695521)
 
 [node name="ciuperca4" type="Node" parent="."]
 script = ExtResource("9_wjvqw")
@@ -212,7 +211,7 @@ rotation = 0.015984429
 progress = 245.76392
 rotates = false
 
-[node name="Node2D5" parent="ciuperca4/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
-position = Vector2(3.9035034, -6.063178)
-rotation = -0.015984429
-scale = Vector2(0.45741782, 0.3961625)
+[node name="ciuperca4" parent="ciuperca4/Path2D" instance=ExtResource("5_tenic")]
+position = Vector2(2313.0002, 1064)
+rotation = -0.011967484
+scale = Vector2(0.6271285, 0.5695521)
