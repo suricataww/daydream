@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://drafgd6db0b5l"]
+[gd_scene load_steps=14 format=3 uid="uid://drafgd6db0b5l"]
 
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_og30x"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="2_7xuih"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cnyss0vs2tak1" path="res://parallax_background.tscn" id="4_lwmgr"]
 [ext_resource type="Script" uid="uid://chrlsj8cmq3l4" path="res://ciuperca.gd" id="5_c8tpp"]
 [ext_resource type="PackedScene" uid="uid://bonc3m3fj0t8b" path="res://ciuperca.tscn" id="5_tenic"]
+[ext_resource type="Script" uid="uid://tgbw6bte7gwv" path="res://ciuperca_2.gd" id="7_2pc3p"]
+[ext_resource type="Script" uid="uid://dhsaakq7wsg3" path="res://ciuperca_3.gd" id="8_plmuo"]
+[ext_resource type="Script" uid="uid://cuc33pvx8o76i" path="res://ciuperca_4.gd" id="9_wjvqw"]
 
 [sub_resource type="Curve2D" id="Curve2D_2pc3p"]
 _data = {
@@ -13,54 +16,194 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="Curve2D" id="Curve2D_mrds7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1950, 470, 0, 0, 0, 0, 2933, 464, 0, 0, 0, 0, 1949, 471)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_plmuo"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3818, 1057, 0, 0, 0, 0, 2886, 1059, 0, 0, 0, 0, 3822, 1057)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_wjvqw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2311, 1052, 0, 0, 0, 0, 2874, 1061, 0, 0, 0, 0, 1792, 1064, 0, 0, 0, 0, 2311, 1054)
+}
+point_count = 4
+
 [node name="Nivel2" type="Node2D"]
 position = Vector2(-154, -39)
 
-[node name="ColorRect" type="Sprite2D" parent="."]
+[node name="Node2D" parent="." instance=ExtResource("3_7xuih")]
+position = Vector2(121, -129)
 
-[node name="Screenshot20250927135250" type="Sprite2D" parent="."]
-position = Vector2(154, 38)
+[node name="ParallaxBackground" parent="Node2D" instance=ExtResource("4_lwmgr")]
+
+[node name="backgrounds" type="Node" parent="."]
+
+[node name="Screenshot20250927135251" type="Sprite2D" parent="backgrounds"]
+position = Vector2(2313, -1)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
-[node name="StaticBody2D" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(465, 439)
-scale = Vector2(0.9610901, 1.0250041)
+[node name="Screenshot20250927135252" type="Sprite2D" parent="backgrounds"]
+position = Vector2(3465, -1)
+scale = Vector2(1.175, 1.1)
+texture = ExtResource("1_og30x")
+centered = false
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(1720.0001, 439)
-scale = Vector2(0.9610901, 1.0250041)
+[node name="Screenshot20250927135253" type="Sprite2D" parent="backgrounds"]
+position = Vector2(3465, 655)
+scale = Vector2(1.175, 1.1)
+texture = ExtResource("1_og30x")
+centered = false
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(783, 418)
-scale = Vector2(0.23148751, 1.316324)
+[node name="Screenshot20250927135254" type="Sprite2D" parent="backgrounds"]
+position = Vector2(2316.9998, 655)
+scale = Vector2(1.175, 1.1)
+texture = ExtResource("1_og30x")
+centered = false
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(155, 475)
+[node name="Screenshot20250927135255" type="Sprite2D" parent="backgrounds"]
+position = Vector2(1159, 655)
+scale = Vector2(1.175, 1.1)
+texture = ExtResource("1_og30x")
+centered = false
+
+[node name="platforms" type="Node" parent="."]
+
+[node name="StaticBody2D3" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(1, 436)
 scale = Vector2(0.938736, 0.5212589)
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(857.99994, 475)
+[node name="StaticBody2D" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(311, 400)
+scale = Vector2(0.9610901, 1.0250041)
+
+[node name="StaticBody2D2" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(629, 379)
+scale = Vector2(0.23148751, 1.316324)
+
+[node name="StaticBody2D4" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(703.99994, 436)
 scale = Vector2(2.615295, 0.51019764)
 
-[node name="Node2D" parent="." instance=ExtResource("3_7xuih")]
-position = Vector2(103, -132)
+[node name="StaticBody2D5" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(1566.0001, 400)
+scale = Vector2(0.9790918, 2.6411636)
 
-[node name="ParallaxBackground" parent="Node2D" instance=ExtResource("4_lwmgr")]
+[node name="StaticBody2D6" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(1885.9999, 522.00006)
+scale = Vector2(3.3683252, 0.9612065)
 
-[node name="ciuperca" type="Node" parent="."]
+[node name="StaticBody2D7" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(2998.0002, 465)
+scale = Vector2(1.2517389, 1.755557)
+
+[node name="StaticBody2D8" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(3409, 466)
+scale = Vector2(1.9956305, 0.6879885)
+
+[node name="StaticBody2D9" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(4312, 197)
+scale = Vector2(0.9282106, 5.6686287)
+
+[node name="StaticBody2D10" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(3983, 516)
+scale = Vector2(0.25852257, 3.2930095)
+
+[node name="StaticBody2D11" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(3983, 754)
+scale = Vector2(1.0582191, 0.9864528)
+
+[node name="StaticBody2D12" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(4548, 603)
+scale = Vector2(0.21326922, 9.461953)
+
+[node name="StaticBody2D13" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(4265, 1108.0001)
+scale = Vector2(0.9883018, 0.75290596)
+
+[node name="StaticBody2D14" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(3851, 1035)
+scale = Vector2(1.2517389, 1.755557)
+
+[node name="StaticBody2D15" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(1774, 1108.0001)
+scale = Vector2(6.3042927, 0.74928653)
+
+[node name="StaticBody2D16" parent="platforms" instance=ExtResource("2_7xuih")]
+position = Vector2(1159, 1035)
+scale = Vector2(1.8731887, 1.7081095)
+
+[node name="ColorRect" type="Sprite2D" parent="."]
+
+[node name="ciuperca 1" type="Node" parent="."]
 script = ExtResource("5_c8tpp")
 
-[node name="Path2D" type="Path2D" parent="ciuperca"]
+[node name="Path2D" type="Path2D" parent="ciuperca 1"]
 curve = SubResource("Curve2D_2pc3p")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="ciuperca/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="ciuperca 1/Path2D"]
 position = Vector2(744, 404)
 rotation = -0.011967514
 rotates = false
 
-[node name="Node2D2" parent="ciuperca/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+[node name="Node2D2" parent="ciuperca 1/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
 position = Vector2(21.321655, -26.74675)
 rotation = 0.011967514
 scale = Vector2(0.45741773, 0.39616248)
+
+[node name="ciuperca2" type="Node" parent="."]
+script = ExtResource("7_2pc3p")
+
+[node name="Path2D" type="Path2D" parent="ciuperca2"]
+curve = SubResource("Curve2D_mrds7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="ciuperca2/Path2D"]
+position = Vector2(1950, 470)
+rotation = -0.0061036884
+rotates = false
+
+[node name="Node2D3" parent="ciuperca2/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+position = Vector2(-0.96313477, -6.006012)
+rotation = 0.006103689
+scale = Vector2(0.45741776, 0.3961625)
+
+[node name="ciuperca3" type="Node" parent="."]
+script = ExtResource("8_plmuo")
+
+[node name="Path2D" type="Path2D" parent="ciuperca3"]
+curve = SubResource("Curve2D_plmuo")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="ciuperca3/Path2D"]
+position = Vector2(3818, 1057)
+rotation = 3.1394467
+rotates = false
+script = ExtResource("7_2pc3p")
+
+[node name="Node2D4" parent="ciuperca3/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+position = Vector2(28.978638, 10.062195)
+rotation = -3.1394467
+scale = Vector2(0.45741782, 0.39616254)
+
+[node name="ciuperca4" type="Node" parent="."]
+script = ExtResource("9_wjvqw")
+
+[node name="Path2D" type="Path2D" parent="ciuperca4"]
+curve = SubResource("Curve2D_wjvqw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="ciuperca4/Path2D"]
+position = Vector2(2556.7322, 1055.9282)
+rotation = 0.015984429
+progress = 245.76392
+rotates = false
+
+[node name="Node2D5" parent="ciuperca4/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+position = Vector2(3.9035034, -6.063178)
+rotation = -0.015984429
+scale = Vector2(0.45741782, 0.3961625)
