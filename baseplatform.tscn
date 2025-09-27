@@ -2,13 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://by1iexj1m3kxu" path="res://Screenshot 2025-09-27 140032.png" id="1_mq1vm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj7o8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq1vm"]
+size = Vector2(330, 72)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="Node2D" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(165, 36)
+scale = Vector2(0.50928795, 0.4490446)
 texture = ExtResource("1_mq1vm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(32.3, 7.8)
-shape = SubResource("RectangleShape2D_gj7o8")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(165, 36)
+shape = SubResource("RectangleShape2D_mq1vm")

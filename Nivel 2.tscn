@@ -1,45 +1,66 @@
-[gd_scene load_steps=6 format=3 uid="uid://drafgd6db0b5l"]
+[gd_scene load_steps=8 format=3 uid="uid://drafgd6db0b5l"]
 
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_og30x"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="2_7xuih"]
-[ext_resource type="Texture2D" uid="uid://cgt2i62rwph14" path="res://BenElf.png" id="3_7xuih"]
-[ext_resource type="Script" uid="uid://lavn885sutu8" path="res://character_body_2d.gd" id="3_lwmgr"]
+[ext_resource type="PackedScene" uid="uid://bwcoipq3smmub" path="res://player.tscn" id="3_7xuih"]
+[ext_resource type="PackedScene" uid="uid://cnyss0vs2tak1" path="res://parallax_background.tscn" id="4_lwmgr"]
+[ext_resource type="Script" uid="uid://chrlsj8cmq3l4" path="res://ciuperca.gd" id="5_c8tpp"]
+[ext_resource type="PackedScene" uid="uid://bonc3m3fj0t8b" path="res://ciuperca.tscn" id="5_tenic"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwmgr"]
-size = Vector2(88, 166)
+[sub_resource type="Curve2D" id="Curve2D_2pc3p"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 744, 404, 0, 0, 0, 0, 1496, 395, 0, 0, 0, 0, 745, 398)
+}
+point_count = 3
 
 [node name="Nivel2" type="Node2D"]
+position = Vector2(-154, -39)
 
 [node name="ColorRect" type="Sprite2D" parent="."]
 
 [node name="Screenshot20250927135250" type="Sprite2D" parent="."]
+position = Vector2(154, 38)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(490, 490)
-scale = Vector2(0.5, 0.5)
+position = Vector2(465, 439)
+scale = Vector2(0.9610901, 1.0250041)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(1720.0001, 439)
+scale = Vector2(0.9610901, 1.0250041)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(876, 540)
-scale = Vector2(0.5, 0.5)
+position = Vector2(783, 418)
+scale = Vector2(0.23148751, 1.316324)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(46, 613)
-scale = Vector2(0.5, 0.5)
+position = Vector2(155, 475)
+scale = Vector2(0.938736, 0.5212589)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-160, 813)
-scale = Vector2(0.5, 0.5)
-script = ExtResource("3_lwmgr")
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(857.99994, 475)
+scale = Vector2(2.615295, 0.51019764)
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(354, -578)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_7xuih")
-flip_h = true
+[node name="Node2D" parent="." instance=ExtResource("3_7xuih")]
+position = Vector2(103, -132)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(368, -561)
-shape = SubResource("RectangleShape2D_lwmgr")
+[node name="ParallaxBackground" parent="Node2D" instance=ExtResource("4_lwmgr")]
+
+[node name="ciuperca" type="Node" parent="."]
+script = ExtResource("5_c8tpp")
+
+[node name="Path2D" type="Path2D" parent="ciuperca"]
+curve = SubResource("Curve2D_2pc3p")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="ciuperca/Path2D"]
+position = Vector2(744, 404)
+rotation = -0.011967514
+rotates = false
+
+[node name="Node2D2" parent="ciuperca/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
+position = Vector2(21.321655, -26.74675)
+rotation = 0.011967514
+scale = Vector2(0.45741773, 0.39616248)
