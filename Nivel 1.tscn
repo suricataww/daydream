@@ -1,3 +1,139 @@
-[gd_scene format=3 uid="uid://cnr0bqflxd32j"]
+[gd_scene load_steps=5 format=3 uid="uid://cnr0bqflxd32j"]
+
+[ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_1boc4"]
+[ext_resource type="Texture2D" uid="uid://by1iexj1m3kxu" path="res://Screenshot 2025-09-27 140032.png" id="2_suadl"]
+[ext_resource type="PackedScene" uid="uid://bwcoipq3smmub" path="res://player.tscn" id="3_oyj17"]
+[ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="4_suadl"]
 
 [node name="Nivel1" type="Node2D"]
+
+[node name="Screenshot20250927135250" type="Sprite2D" parent="."]
+position = Vector2(575.75, 324.5)
+scale = Vector2(1.1687053, 1.0858585)
+texture = ExtResource("1_1boc4")
+
+[node name="Screenshot20250927135251" type="Sprite2D" parent="."]
+position = Vector2(1680.25, 324)
+scale = Vector2(1.0820591, 1.0875422)
+texture = ExtResource("1_1boc4")
+
+[node name="Screenshot20250927135252" type="Sprite2D" parent="."]
+position = Vector2(2741.25, 323.5)
+scale = Vector2(1.0922529, 1.0824916)
+texture = ExtResource("1_1boc4")
+
+[node name="Screenshot20250927135253" type="Sprite2D" parent="."]
+position = Vector2(2740.0002, -325)
+scale = Vector2(1.0902138, 1.0909091)
+texture = ExtResource("1_1boc4")
+
+[node name="Screenshot20250927135254" type="Sprite2D" parent="."]
+position = Vector2(1681.25, -325)
+scale = Vector2(1.0759429, 1.0909091)
+texture = ExtResource("1_1boc4")
+
+[node name="Screenshot20250927135255" type="Sprite2D" parent="."]
+position = Vector2(574.25, -327.99997)
+scale = Vector2(1.1799184, 1.090909)
+texture = ExtResource("1_1boc4")
+
+[node name="Screenshot20250927140033" type="Sprite2D" parent="."]
+position = Vector2(743.5822, 389.2008)
+rotation = -0.5399905
+scale = Vector2(1.1566181, 0.70382166)
+texture = ExtResource("2_suadl")
+
+[node name="Screenshot20250927140034" type="Sprite2D" parent="."]
+position = Vector2(1228, 200)
+scale = Vector2(0.5905572, 0.66719735)
+texture = ExtResource("2_suadl")
+
+[node name="Screenshot20250927140035" type="Sprite2D" parent="."]
+position = Vector2(1656.9999, 306.99994)
+rotation = 0.38357833
+scale = Vector2(0.91760993, 0.74050444)
+texture = ExtResource("2_suadl")
+
+[node name="Screenshot20250927140036" type="Sprite2D" parent="."]
+position = Vector2(2424, 237.00006)
+rotation = -0.30914563
+scale = Vector2(1.7191703, 0.79203993)
+texture = ExtResource("2_suadl")
+
+[node name="Screenshot20250927140037" type="Sprite2D" parent="."]
+position = Vector2(3101.0002, 77.00001)
+scale = Vector2(0.5323145, 0.86544573)
+texture = ExtResource("2_suadl")
+
+[node name="Screenshot20250927140032" type="Sprite2D" parent="."]
+position = Vector2(230.00002, 591)
+scale = Vector2(0.6981424, 0.7627389)
+texture = ExtResource("2_suadl")
+
+[node name="Node2D" parent="." instance=ExtResource("3_oyj17")]
+position = Vector2(-32, -78)
+
+[node name="Node2D2" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(10, 529)
+scale = Vector2(1.3571428, 1.6530613)
+
+[node name="Node2D3" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(412.00003, 546)
+rotation = -0.5651084
+scale = Vector2(2.2467399, 1.804197)
+
+[node name="Node2D4" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(1035, 150)
+scale = Vector2(1.1485775, 1.4291893)
+
+[node name="Node2D5" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(1406.0001, 150)
+rotation = 0.39690492
+scale = Vector2(1.8197647, 1.5965005)
+
+[node name="Node2D6" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(1867, 341.99994)
+rotation = -0.29903808
+scale = Vector2(3.444122, 1.783939)
+
+[node name="Node2D7" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(2918, 10)
+scale = Vector2(1.086705, 1.9934051)
+
+[node name="Node2D8" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(3052.9998, -80.000015)
+scale = Vector2(0.678479, 1.2378889)
+
+[node name="Node2D9" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(3141, -172)
+scale = Vector2(0.42325798, 1.2459702)
+
+[node name="Node2D10" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(2510, -328)
+scale = Vector2(0.47069234, 1.0261786)
+
+[node name="Node2D11" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(2767, -265)
+scale = Vector2(0.5515739, 1.1342121)
+
+[node name="Node2D12" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(2239, -253.00003)
+scale = Vector2(0.53441757, 0.89727074)
+
+[node name="Node2D13" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(1840, -300)
+
+[node name="Node2D14" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(1450, -362)
+scale = Vector2(0.9726832, 1.0707453)
+
+[node name="Node2D15" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(991.00006, -264)
+scale = Vector2(1.0765036, 1.1767911)
+
+[node name="Node2D16" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(550, -313)
+
+[node name="Node2D17" parent="." instance=ExtResource("4_suadl")]
+position = Vector2(2, -378)
+scale = Vector2(1.4237932, 1.2468961)
