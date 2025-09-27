@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+var SPEED = 300.0
 # -600 pt dezavantaj, -900 normal
-const JUMP_VELOCITY = -900.0
+var JUMP_VELOCITY = -900.0
 	 
 
 func _physics_process(delta: float) -> void:
@@ -27,10 +27,27 @@ func _physics_process(delta: float) -> void:
 
 func killPlayer():
 	position = %respawn.position
-	
-func _on_deathzone_body_entered(body: Node2D) -> void:
+
+func _ready():
+	if Global.speed_upgrade:
+		SPEED = 150.0
+	if Global.jump_upgrade:
+		JUMP_VELOCITY = -600  # Increase jump height
+		
 		killPlayer()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('jucator'):
 		body.killPlayer()
+
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_area_2d_2_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_deathzone_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

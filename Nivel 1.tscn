@@ -48,7 +48,7 @@ scale = Vector2(0.13622618, -0.67796206)
 texture = ExtResource("2_oyj17")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_oyj17")]
-position = Vector2(70, 460)
+position = Vector2(74, 459)
 
 [node name="platforms" type="Node" parent="."]
 
@@ -80,12 +80,12 @@ position = Vector2(2918, 10)
 scale = Vector2(1.086705, 1.9934051)
 
 [node name="Node2D8" parent="platforms" instance=ExtResource("4_suadl")]
-position = Vector2(3052.9998, -80.000015)
-scale = Vector2(0.678479, 1.2378889)
+position = Vector2(3001, -78.00001)
+scale = Vector2(0.9340796, 1.2773929)
 
 [node name="Node2D9" parent="platforms" instance=ExtResource("4_suadl")]
-position = Vector2(3141, -172)
-scale = Vector2(0.42325798, 1.2459702)
+position = Vector2(3052.0002, -169)
+scale = Vector2(0.67796266, 1.2459702)
 
 [node name="Node2D10" parent="platforms" instance=ExtResource("4_suadl")]
 position = Vector2(2510, -328)
@@ -121,7 +121,7 @@ scale = Vector2(1.4237932, 1.2468961)
 script = ExtResource("5_3mvlh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(57.875, -511)
+position = Vector2(32, -507)
 shape = SubResource("RectangleShape2D_012ah")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

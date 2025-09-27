@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Daydream"
-run/main_scene="uid://cnr0bqflxd32j"
+run/main_scene="uid://b5xstslre4qvf"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://global.gd"
 
 [input]
 

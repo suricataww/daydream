@@ -12,7 +12,4 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node) -> void:
 	if body.is_in_group("Player"):
-		if body.has_method("killPlayer"):
-			body.killPlayer()
-		else:
-			print("killPlayer() not found on Player")
+		body.killPlayer()

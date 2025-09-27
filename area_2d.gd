@@ -1,13 +1,15 @@
 extends Area2D
 
-var entered = false
+var entered: bool = false
 
-func _on_Area2D_body_entered(body: Node):
+func _physics_process(delta: float) -> void:
+	if entered and Input.is_action_just_pressed("enter"):
+		get_tree().change_scene_to_file("res://abilities_3.tscn")
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	entered = true
 
-func _on_Area2D_body_exited(body: Node):
-	entered = false
 
-func _physics_process (_delta):
-	if entered:
-		get_tree().change_scene_to_file("res://Nivel2.tscn")
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	entered = false

@@ -10,4 +10,4 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _physics_process(delta: float) -> void:
 	if entered and Input.is_action_just_pressed("enter"):
-		get_tree().change_scene_to_file("res://abilities_2.tscn")
+		get_tree().change_scene_to_file("res://lvl4.tscn")

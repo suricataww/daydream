@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://drafgd6db0b5l"]
+[gd_scene load_steps=16 format=3 uid="uid://drafgd6db0b5l"]
 
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_og30x"]
 [ext_resource type="Texture2D" uid="uid://4rjmt3q6u57w" path="res://download.png" id="1_wjvqw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://tgbw6bte7gwv" path="res://ciuperca_2.gd" id="7_2pc3p"]
 [ext_resource type="Script" uid="uid://dhsaakq7wsg3" path="res://ciuperca_3.gd" id="8_plmuo"]
 [ext_resource type="Script" uid="uid://cuc33pvx8o76i" path="res://ciuperca_4.gd" id="9_wjvqw"]
+[ext_resource type="Script" uid="uid://deph2qawyniu3" path="res://area_2d.gd" id="10_wjvqw"]
 
 [sub_resource type="Curve2D" id="Curve2D_2pc3p"]
 _data = {
@@ -33,6 +34,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 2311, 1052, 0, 0, 0, 0, 2874, 1061, 0, 0, 0, 0, 1792, 1064, 0, 0, 0, 0, 2311, 1054)
 }
 point_count = 4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1ynw"]
+size = Vector2(1150.648, 745.0581)
 
 [node name="Nivel2" type="Node2D"]
 position = Vector2(-154, -39)
@@ -84,8 +88,8 @@ scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_plmuo")]
-position = Vector2(272, 409)
+[node name="Player" parent="." instance=ExtResource("3_plmuo")]
+position = Vector2(279, 406)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("2_7xuih")]
 position = Vector2(155, 475)
@@ -153,7 +157,6 @@ scale = Vector2(1.8731887, 1.7081095)
 
 [node name="ciuperca1" type="Node" parent="."]
 script = ExtResource("5_c8tpp")
-speed = null
 
 [node name="Path2D" type="Path2D" parent="ciuperca1"]
 curve = SubResource("Curve2D_2pc3p")
@@ -166,7 +169,6 @@ rotates = false
 [node name="ciuperca" parent="ciuperca1/Path2D/PathFollow2D" instance=ExtResource("5_tenic")]
 position = Vector2(4.143322, -11.951275)
 scale = Vector2(0.62712836, 0.569552)
-speed = null
 
 [node name="ciuperca2" type="Node" parent="."]
 script = ExtResource("7_2pc3p")
@@ -183,7 +185,6 @@ rotates = false
 position = Vector2(-16.04248, 6.902237)
 rotation = -0.005863824
 scale = Vector2(0.6271285, 0.56955206)
-speed = null
 
 [node name="ciuperca3" type="Node" parent="."]
 script = ExtResource("8_plmuo")
@@ -201,7 +202,6 @@ script = ExtResource("7_2pc3p")
 position = Vector2(11.01712, -7.976391)
 rotation = 3.131771
 scale = Vector2(0.6271285, 0.5695521)
-speed = null
 
 [node name="respawn2" type="Node2D" parent="."]
 position = Vector2(280, 472)
@@ -221,4 +221,20 @@ rotates = false
 position = Vector2(2.1916504, 11.966553)
 rotation = -0.027951915
 scale = Vector2(0.6271285, 0.5695522)
-speed = null
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1353, 941)
+scale = Vector2(0.11384879, 0.40936399)
+script = ExtResource("10_wjvqw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(232.76367, -47.63501)
+shape = SubResource("RectangleShape2D_h1ynw")
+
+[node name="ColorRect" type="Sprite2D" parent="."]
+position = Vector2(1353, 941)
+scale = Vector2(0.11384879, 0.40936399)
+texture = ExtResource("1_wjvqw")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_area_2d_body_exited"]
