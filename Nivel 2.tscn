@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://drafgd6db0b5l"]
+[gd_scene load_steps=14 format=3 uid="uid://drafgd6db0b5l"]
 
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_og30x"]
 [ext_resource type="Texture2D" uid="uid://4rjmt3q6u57w" path="res://download.png" id="1_wjvqw"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="2_7xuih"]
-[ext_resource type="PackedScene" uid="uid://bwcoipq3smmub" path="res://player.tscn" id="3_7xuih"]
-[ext_resource type="PackedScene" uid="uid://cnyss0vs2tak1" path="res://parallax_background.tscn" id="4_lwmgr"]
+[ext_resource type="PackedScene" uid="uid://8ehf8ahyr5l2" path="res://jucator.tscn" id="3_plmuo"]
 [ext_resource type="Script" uid="uid://chrlsj8cmq3l4" path="res://ciuperca.gd" id="5_c8tpp"]
 [ext_resource type="PackedScene" uid="uid://bonc3m3fj0t8b" path="res://ciuperca.tscn" id="5_tenic"]
 [ext_resource type="Script" uid="uid://tgbw6bte7gwv" path="res://ciuperca_2.gd" id="7_2pc3p"]
@@ -43,107 +42,113 @@ position = Vector2(190, 289)
 scale = Vector2(-0.1655964, 0.8871182)
 texture = ExtResource("1_wjvqw")
 
-[node name="Node2D" parent="." instance=ExtResource("3_7xuih")]
-position = Vector2(188, -127)
-
-[node name="ParallaxBackground" parent="Node2D" instance=ExtResource("4_lwmgr")]
-
-[node name="backgrounds" type="Node" parent="."]
-
-[node name="Screenshot20250927135251" type="Sprite2D" parent="backgrounds"]
-position = Vector2(2313, -1)
+[node name="Screenshot20250927135251" type="Sprite2D" parent="."]
+position = Vector2(2467, 38)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
-[node name="Screenshot20250927135252" type="Sprite2D" parent="backgrounds"]
-position = Vector2(3465, -1)
+[node name="Screenshot20250927135256" type="Sprite2D" parent="."]
+position = Vector2(1313, 38)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
-[node name="Screenshot20250927135253" type="Sprite2D" parent="backgrounds"]
-position = Vector2(3465, 655)
+[node name="Screenshot20250927135257" type="Sprite2D" parent="."]
+position = Vector2(165, 38)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
-[node name="Screenshot20250927135254" type="Sprite2D" parent="backgrounds"]
-position = Vector2(2316.9998, 655)
+[node name="Screenshot20250927135252" type="Sprite2D" parent="."]
+position = Vector2(3619, 38)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
-[node name="Screenshot20250927135255" type="Sprite2D" parent="backgrounds"]
-position = Vector2(1159, 655)
+[node name="Screenshot20250927135253" type="Sprite2D" parent="."]
+position = Vector2(3619, 694)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
-[node name="platforms" type="Node" parent="."]
+[node name="Screenshot20250927135254" type="Sprite2D" parent="."]
+position = Vector2(2470.9998, 694)
+scale = Vector2(1.175, 1.1)
+texture = ExtResource("1_og30x")
+centered = false
 
-[node name="StaticBody2D3" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(1, 436)
+[node name="Screenshot20250927135255" type="Sprite2D" parent="."]
+position = Vector2(1313, 694)
+scale = Vector2(1.175, 1.1)
+texture = ExtResource("1_og30x")
+centered = false
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_plmuo")]
+position = Vector2(272, 409)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(155, 475)
 scale = Vector2(0.938736, 0.5212589)
 
-[node name="StaticBody2D" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(311, 400)
+[node name="StaticBody2D" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(465, 439)
 scale = Vector2(0.9610901, 1.0250041)
 
-[node name="StaticBody2D2" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(629, 379)
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(783, 418)
 scale = Vector2(0.23148751, 1.316324)
 
-[node name="StaticBody2D4" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(703.99994, 436)
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(857.99994, 475)
 scale = Vector2(2.615295, 0.51019764)
 
-[node name="StaticBody2D5" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(1566.0001, 400)
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(1720.0001, 439)
 scale = Vector2(0.9790918, 2.6411636)
 
-[node name="StaticBody2D6" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(1885.9999, 522.00006)
+[node name="StaticBody2D6" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(2039.9999, 561.00006)
 scale = Vector2(3.3683252, 0.9612065)
 
-[node name="StaticBody2D7" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(2998.0002, 465)
+[node name="StaticBody2D7" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(3152.0002, 504)
 scale = Vector2(1.2517389, 1.755557)
 
-[node name="StaticBody2D8" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(3409, 466)
+[node name="StaticBody2D8" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(3563, 505)
 scale = Vector2(1.9956305, 0.6879885)
 
-[node name="StaticBody2D9" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(4312, 197)
+[node name="StaticBody2D9" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(4466, 236)
 scale = Vector2(0.9282106, 5.6686287)
 
-[node name="StaticBody2D10" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(3983, 516)
+[node name="StaticBody2D10" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(4137, 555)
 scale = Vector2(0.25852257, 3.2930095)
 
-[node name="StaticBody2D11" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(3983, 754)
+[node name="StaticBody2D11" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(4137, 793)
 scale = Vector2(1.0582191, 0.9864528)
 
-[node name="StaticBody2D12" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(4548, 603)
+[node name="StaticBody2D14" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(4005, 1074)
+scale = Vector2(1.2517389, 1.7555567)
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(4702, 642)
 scale = Vector2(0.21326922, 9.461953)
 
-[node name="StaticBody2D13" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(4265, 1108.0001)
-scale = Vector2(0.9883018, 0.75290596)
+[node name="StaticBody2D13" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(4419, 1147)
+scale = Vector2(0.9883018, 0.7529059)
 
-[node name="StaticBody2D14" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(3851, 1035)
-scale = Vector2(1.2517389, 1.755557)
-
-[node name="StaticBody2D15" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(1774, 1108.0001)
+[node name="StaticBody2D15" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(1928, 1147.0001)
 scale = Vector2(6.3042927, 0.74928653)
 
-[node name="StaticBody2D16" parent="platforms" instance=ExtResource("2_7xuih")]
-position = Vector2(1159, 1035)
+[node name="StaticBody2D16" parent="." instance=ExtResource("2_7xuih")]
+position = Vector2(1313, 1074)
 scale = Vector2(1.8731887, 1.7081095)
 
 [node name="ciuperca 1" type="Node" parent="."]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_1boc4"]
 [ext_resource type="Texture2D" uid="uid://4rjmt3q6u57w" path="res://download.png" id="2_oyj17"]
-[ext_resource type="PackedScene" uid="uid://bwcoipq3smmub" path="res://player.tscn" id="3_oyj17"]
+[ext_resource type="PackedScene" uid="uid://8ehf8ahyr5l2" path="res://jucator.tscn" id="3_oyj17"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="4_suadl"]
 [ext_resource type="Script" uid="uid://dyvssdxrd5y4h" path="res://area_2.gd" id="5_3mvlh"]
 
@@ -46,6 +46,9 @@ position = Vector2(29.000002, -520)
 rotation = 3.1415927
 scale = Vector2(0.13622618, -0.67796206)
 texture = ExtResource("2_oyj17")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_oyj17")]
+position = Vector2(70, 460)
 
 [node name="platforms" type="Node" parent="."]
 
@@ -113,9 +116,6 @@ position = Vector2(550, -313)
 [node name="Node2D17" parent="platforms" instance=ExtResource("4_suadl")]
 position = Vector2(2, -378)
 scale = Vector2(1.4237932, 1.2468961)
-
-[node name="Node2D" parent="." instance=ExtResource("3_oyj17")]
-position = Vector2(-28, -85)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_3mvlh")

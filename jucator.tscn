@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://8ehf8ahyr5l2"]
+
+[ext_resource type="Script" uid="uid://lavn885sutu8" path="res://character_body_2d.gd" id="1_pdocr"]
+[ext_resource type="Texture2D" uid="uid://cgt2i62rwph14" path="res://BenElf.png" id="2_p6no6"]
+[ext_resource type="Script" uid="uid://e3rp8fh1q4f7" path="res://camera_2d.gd" id="3_ylf37"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8eepy"]
+size = Vector2(776.7577, 1079.6316)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_pdocr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.063283965, 0.066237964)
+texture = ExtResource("2_p6no6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.499999, 13.5)
+rotation = -3.1415925
+scale = Vector2(0.07080715, -0.09725539)
+shape = SubResource("RectangleShape2D_8eepy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_ylf37")

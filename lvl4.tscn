@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bxclpp576bvkk" path="res://360_F_505724304_Ezh1XyejL3iN7op0zqH2vprzSGFBGEuy.jpg" id="3_sboe7"]
 [ext_resource type="Texture2D" uid="uid://5fscgu2tw6v8" path="res://360_F_526406301_1tfAx9HVYhrW6uZDStKaGaH4F2J4kB98.jpg" id="4_ynrix"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="5_8efx6"]
-[ext_resource type="PackedScene" uid="uid://bwcoipq3smmub" path="res://player.tscn" id="6_h3grg"]
+[ext_resource type="PackedScene" uid="uid://8ehf8ahyr5l2" path="res://jucator.tscn" id="6_13mhm"]
 
 [node name="Screenshot20250927135250" type="Sprite2D"]
 position = Vector2(576, 322)
@@ -43,8 +43,8 @@ scale = Vector2(3.4441388, 0.6959099)
 position = Vector2(2631.3645, 246.8661)
 scale = Vector2(2.3891463, 0.69675803)
 
-[node name="Node2D6" parent="." instance=ExtResource("6_h3grg")]
-position = Vector2(-530.0223, -390.8713)
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_13mhm")]
+position = Vector2(-410.72467, 176.73367)
 
 [node name="Node2D5" parent="." instance=ExtResource("5_8efx6")]
 position = Vector2(3417.877, 246.86606)

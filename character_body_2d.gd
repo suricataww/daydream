@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-# -600 pt dezavantaj, -800 normal
+# -600 pt dezavantaj, -900 normal
 const JUMP_VELOCITY = -900.0
 	 
 
@@ -24,3 +24,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, 300)
 
 	move_and_slide()
+
+func killPlayer():
+	position = %respawn.position
+	
+func _on_deathzone_body_entered(body: Node2D) -> void:
+		killPlayer()

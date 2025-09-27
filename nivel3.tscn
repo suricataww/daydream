@@ -1,16 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://e45uqeurgkmb"]
+[gd_scene load_steps=8 format=3 uid="uid://e45uqeurgkmb"]
 
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="2_8vsvm"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="3_tecg2"]
-[ext_resource type="PackedScene" uid="uid://bwcoipq3smmub" path="res://player.tscn" id="4_8vsvm"]
+[ext_resource type="PackedScene" uid="uid://8ehf8ahyr5l2" path="res://jucator.tscn" id="3_ytp32"]
 [ext_resource type="Script" uid="uid://ucxc4qdyipp5" path="res://path_2d.gd" id="4_tecg2"]
-[ext_resource type="PackedScene" uid="uid://ubmyt4kqn63o" path="res://enemy.tscn" id="5_tecg2"]
+[ext_resource type="PackedScene" path="res://enemy.tscn" id="5_tecg2"]
 
 [sub_resource type="Curve2D" id="Curve2D_8vsvm"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 134, -459, 0, 0, 0, 0, 111, 402, 0, 0, 0, 0, 237, 411, 0, 0, 0, 0, 262, 405, 0, 0, 0, 0, 265, 471, 0, 0, 0, 0, 1035, 479, 0, 0, 0, 0, 1041, 405, 0, 0, 0, 0, 1147, 405, 0, 0, 0, 0, 1167, 394, 0, 0, 0, 0, 1178, 474, 0, 0, 0, 0, 1210, 485, 0, 0, 0, 0, 1937, 482, 0, 0, 0, 0, 1946, 391, 0, 0, 0, 0, 1983, 391, 0, 0, 0, 0, 2297, 394, 0, 0, 0, 0, 2314, 391, 0, 0, 0, 0, 2305, 488, 0, 0, 0, 0, 3208, 488, 0, 0, 0, 0, 3217, 379, 0, 0, 0, 0, 3299, 368, 0, 0, 0, 0, 3065, 205, 0, 0, 0, 0, 2977, 214, 0, 0, 0, 0, 2917, 60, 0, 0, 0, 0, 2803, 48, 0, 0, 0, 0, 2712, -40, 0, 0, 0, 0, 2663, -94, 0, 0, 0, 0, 2600, -126, 0, 0, 0, 0, 2549, -185, 0, 0, 0, 0, 2478, -200, 0, 0, 0, 0, 2646, -311, 0, 0, 0, 0, 2826, -302, 0, 0, 0, 0, 2937, -274, 0, 0, 0, 0, 3037, -234, 0, 0, 0, 0, 3165, -177, 0, 0, 0, 0, 3259, -120, 0, 0, 0, 0, 3331, -49, 0, 0, 0, 0, 3385, -6, 0, 0, 0, 0, 3431, 123, 0, 0, 0, 0, 3519, 140, 0, 0, 0, 0, 3647, 194, 0, 0, 0, 0, 3961, 214, 0, 0, 0, 0, 4210, 237, 0, 0, 0, 0, 4519, 245, 0, 0, 0, 0, 4673, 237, 0, 0, 0, 0, 4952, 223, 0, 0, 0, 0, 5061, 114, 0, 0, 0, 0, 5369, 117, 0, 0, 0, 0, 5543, 37, 0, 0, 0, 0, 5717, 43, 0, 0, 0, 0, 5734, -34, 0, 0, 0, 0, 5828, -14, 0, 0, 0, 0, 5828, -94, 0, 0, 0, 0, 5985, -103, 0, 0, 0, 0, 5768, -280, 0, 0, 0, 0, 5460, -297, 0, 0, 0, 0, 5326, -368, 0, 0, 0, 0, 5021, -379, 0, 0, 0, 0, 4873, -282, 0, 0, 0, 0, 4601, -280, 0, 0, 0, 0, 4470, -337, 0, 0, 0, 0, 4168, -334, 0, 0, 0, 0, 3979, -428, 0, 0, 0, 0, 3697, -428)
 }
 point_count = 63
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tecg2"]
+size = Vector2(105.86665, 20)
 
 [node name="Node2D" type="Node2D"]
 
@@ -160,17 +163,18 @@ position = Vector2(3671, -377)
 position = Vector2(2765, -465)
 scale = Vector2(2.3660464, 0.9368775)
 
+[node name="respawn" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(108, 433)
+scale = Vector2(0.9948344, 0.9739827)
+
+[node name="Node2D29" parent="." instance=ExtResource("3_tecg2")]
+position = Vector2(3301.8813, 33.67044)
+scale = Vector2(0.194335, 1.5627165)
+
 [node name="Node2D" parent="." instance=ExtResource("3_tecg2")]
 position = Vector2(5, 508)
-scale = Vector2(20.335804, 1.0949415)
-
-[node name="Node2D6" parent="Node2D" instance=ExtResource("4_8vsvm")]
-position = Vector2(-2.114497, -607.3384)
-scale = Vector2(0.04917435, 0.9132908)
-
-[node name="Node2D" parent="Node2D" instance=ExtResource("3_tecg2")]
-position = Vector2(162.9638, -444.7726)
-scale = Vector2(0.009605917, 1.4653388)
+scale = Vector2(10.704698, 1.987491)
 
 [node name="Node2D6" parent="." instance=ExtResource("3_tecg2")]
 position = Vector2(5450, -232)
@@ -180,6 +184,9 @@ position = Vector2(5016, -314)
 
 [node name="Node2D27" parent="." instance=ExtResource("3_tecg2")]
 position = Vector2(4585, -224)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_ytp32")]
+position = Vector2(138, 381)
 
 [node name="Node" type="Node" parent="."]
 
@@ -196,3 +203,12 @@ rotates = false
 position = Vector2(-3.1858444, -6.9173965)
 rotation = -1.5975031
 scale = Vector2(0.11453474, 0.11055692)
+
+[node name="deathzone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deathzone"]
+position = Vector2(5119, 608)
+scale = Vector2(29.944193, 3.965354)
+shape = SubResource("RectangleShape2D_tecg2")
+
+[connection signal="body_entered" from="deathzone" to="CharacterBody2D" method="_on_deathzone_body_entered"]
