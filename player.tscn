@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwcoipq3smmub"]
+
+[ext_resource type="Script" uid="uid://lavn885sutu8" path="res://character_body_2d.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cgt2i62rwph14" path="res://BenElf.png" id="2_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwmgr"]
+size = Vector2(88, 166)
+
+[node name="Node" type="Node"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-160, 813)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(354, -578)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_i3pqv")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(368, -561)
+shape = SubResource("RectangleShape2D_lwmgr")
