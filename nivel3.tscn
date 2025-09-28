@@ -8,8 +8,8 @@
 [ext_resource type="Script" uid="uid://ucxc4qdyipp5" path="res://path_2d.gd" id="4_tecg2"]
 [ext_resource type="Texture2D" uid="uid://dogegricf2wc2" path="res://pixil-frame-0 (7).png" id="4_y84xu"]
 [ext_resource type="Texture2D" uid="uid://dbeveohubljyt" path="res://pixil-frame-0 (9).png" id="5_grpi2"]
-[ext_resource type="PackedScene" path="res://enemy.tscn" id="5_tecg2"]
 [ext_resource type="Script" uid="uid://bjv410mmayjck" path="res://area_2d_2.gd" id="6_ytp32"]
+[ext_resource type="PackedScene" uid="uid://dugev7rxcou7k" path="res://enemy1.tscn" id="9_souud"]
 [ext_resource type="Texture2D" uid="uid://d267appj1ucxx" path="res://image-removebg-preview (10).png" id="11_17ehh"]
 [ext_resource type="Texture2D" uid="uid://bdtgcrvbf8qdi" path="res://pixil-frame-0.png" id="12_ehu1p"]
 [ext_resource type="Texture2D" uid="uid://by4j2kupi04wa" path="res://pixil-frame-0 (10).png" id="13_5c54j"]
@@ -253,10 +253,8 @@ position = Vector2(134, -459)
 rotation = 1.5975031
 rotates = false
 
-[node name="Node2D" parent="Node/Path2D/PathFollow2D" instance=ExtResource("5_tecg2")]
-position = Vector2(-3.1858444, -6.9173965)
-rotation = -1.5975031
-scale = Vector2(0.11453474, 0.11055692)
+[node name="enemy" parent="Node/Path2D/PathFollow2D" instance=ExtResource("9_souud")]
+scale = Vector2(0.15136376, -0.14247577)
 
 [node name="deathzone" type="Area2D" parent="."]
 

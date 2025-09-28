@@ -11,5 +11,5 @@ func _process(delta: float) -> void:
 		path_follow.progress = fmod(path_follow.progress + speed * delta, length)
 
 func _on_area_2d_body_entered(body: Node) -> void:
-	if body.is_in_group("Player"):
+	if body.is_in_group(""):
 		body.killPlayer()
