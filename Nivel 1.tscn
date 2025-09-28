@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnr0bqflxd32j"]
+[gd_scene load_steps=8 format=3 uid="uid://cnr0bqflxd32j"]
 
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_1boc4"]
-[ext_resource type="Texture2D" uid="uid://4rjmt3q6u57w" path="res://download.png" id="2_oyj17"]
+[ext_resource type="Texture2D" uid="uid://b2uhp0bvcclx4" path="res://black-stone-texture-dark-abstract-background-natural-mineral-rock-close-up-details-empty-backdrop-with-copy-space-design_154092-31141.jpg" id="1_3mvlh"]
+[ext_resource type="Texture2D" uid="uid://c8gdgdh32gd53" path="res://image-removebg-preview (14).png" id="2_oyj17"]
 [ext_resource type="PackedScene" uid="uid://8ehf8ahyr5l2" path="res://jucator.tscn" id="3_oyj17"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="4_suadl"]
 [ext_resource type="Script" uid="uid://dyvssdxrd5y4h" path="res://area_2.gd" id="5_3mvlh"]
@@ -10,6 +11,11 @@
 size = Vector2(116.25, 262)
 
 [node name="Nivel1" type="Node2D"]
+
+[node name="BlackStoneTextureDarkAbstractBackgroundNaturalMineralRockCloseUpDetailsEmptyBackdropWithCopySpaceDesign15409231141" type="Sprite2D" parent="."]
+position = Vector2(1512, -45)
+scale = Vector2(8.454473, 5.9448442)
+texture = ExtResource("1_3mvlh")
 
 [node name="Screenshot20250927135250" type="Sprite2D" parent="."]
 position = Vector2(575.75, 324.5)
@@ -42,13 +48,19 @@ scale = Vector2(3.3685014, 2.195286)
 texture = ExtResource("1_1boc4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(29.000002, -520)
+position = Vector2(35, -517)
 rotation = 3.1415927
-scale = Vector2(0.13622618, -0.67796206)
+scale = Vector2(0.9788806, -0.82715803)
+texture = ExtResource("2_oyj17")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(35, 390)
+rotation = 3.1415927
+scale = Vector2(0.9788806, -0.82715803)
 texture = ExtResource("2_oyj17")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_oyj17")]
-position = Vector2(59, 479)
+position = Vector2(50, 490)
 
 [node name="platforms" type="Node" parent="."]
 
@@ -59,19 +71,19 @@ scale = Vector2(1.3571428, 1.6530613)
 [node name="Node2D3" parent="platforms" instance=ExtResource("4_suadl")]
 position = Vector2(412.00003, 546)
 rotation = -0.5651084
-scale = Vector2(2.2467399, 1.804197)
+scale = Vector2(2.113654, 1.5628526)
 
 [node name="Node2D4" parent="platforms" instance=ExtResource("4_suadl")]
 position = Vector2(1035, 150)
 scale = Vector2(1.1485775, 1.4291893)
 
 [node name="Node2D5" parent="platforms" instance=ExtResource("4_suadl")]
-position = Vector2(1406.0001, 150)
+position = Vector2(1411.9999, 133.99997)
 rotation = 0.39690495
-scale = Vector2(1.8197646, 1.5965005)
+scale = Vector2(3.207145, 1.7156575)
 
 [node name="Node2D6" parent="platforms" instance=ExtResource("4_suadl")]
-position = Vector2(1867, 341.99994)
+position = Vector2(1774.9999, 365.99997)
 rotation = -0.2990381
 scale = Vector2(3.444122, 1.7839389)
 

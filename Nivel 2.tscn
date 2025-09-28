@@ -1,16 +1,22 @@
-[gd_scene load_steps=18 format=3 uid="uid://drafgd6db0b5l"]
+[gd_scene load_steps=23 format=3 uid="uid://drafgd6db0b5l"]
 
+[ext_resource type="Texture2D" uid="uid://bkv1mqudrrlou" path="res://pixil-frame-0 (2).png" id="1_h06wa"]
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_og30x"]
-[ext_resource type="Texture2D" uid="uid://4rjmt3q6u57w" path="res://download.png" id="1_wjvqw"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="2_7xuih"]
+[ext_resource type="Texture2D" uid="uid://bdtgcrvbf8qdi" path="res://pixil-frame-0.png" id="2_gbjuw"]
+[ext_resource type="Texture2D" uid="uid://c8gdgdh32gd53" path="res://image-removebg-preview (14).png" id="2_h1ynw"]
+[ext_resource type="Texture2D" uid="uid://dar5ki72c5wto" path="res://pixil-frame-0 (1).png" id="3_dhm8r"]
 [ext_resource type="PackedScene" uid="uid://8ehf8ahyr5l2" path="res://jucator.tscn" id="3_plmuo"]
+[ext_resource type="Texture2D" uid="uid://c8gu13v2o3d5k" path="res://pixil-frame-0 (4).png" id="4_x3736"]
+[ext_resource type="Texture2D" uid="uid://dhnmmvjfbcndc" path="res://pixil-frame-0 (5).png" id="5_2vewt"]
 [ext_resource type="Script" uid="uid://chrlsj8cmq3l4" path="res://ciuperca.gd" id="5_c8tpp"]
 [ext_resource type="PackedScene" uid="uid://bonc3m3fj0t8b" path="res://ciuperca.tscn" id="5_tenic"]
+[ext_resource type="Texture2D" uid="uid://dogegricf2wc2" path="res://pixil-frame-0 (7).png" id="6_dhm8r"]
 [ext_resource type="Script" uid="uid://tgbw6bte7gwv" path="res://ciuperca_2.gd" id="7_2pc3p"]
 [ext_resource type="Script" uid="uid://dhsaakq7wsg3" path="res://ciuperca_3.gd" id="8_plmuo"]
 [ext_resource type="Script" uid="uid://cuc33pvx8o76i" path="res://ciuperca_4.gd" id="9_wjvqw"]
 [ext_resource type="Script" uid="uid://deph2qawyniu3" path="res://area_2d.gd" id="10_wjvqw"]
-[ext_resource type="Texture2D" uid="uid://d267appj1ucxx" path="res://image-removebg-preview (10).png" id="11_h1ynw"]
+[ext_resource type="Texture2D" uid="uid://8u5t8te0xvts" path="res://pixil-frame-0 (6).png" id="16_gbjuw"]
 
 [sub_resource type="Curve2D" id="Curve2D_2pc3p"]
 _data = {
@@ -39,59 +45,132 @@ point_count = 4
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h1ynw"]
 size = Vector2(1150.648, 745.0581)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jq2hg"]
-radius = 173.36426
-height = 356.19922
-
 [node name="Nivel2" type="Node2D"]
 position = Vector2(-154, -39)
 
-[node name="ColorRect2" type="Sprite2D" parent="."]
-position = Vector2(190, 289)
-scale = Vector2(-0.1655964, 0.8871182)
-texture = ExtResource("1_wjvqw")
+[node name="PixilFrame0(2)" type="Sprite2D" parent="."]
+position = Vector2(4479, 194)
+scale = Vector2(0.23, 0.2768)
+texture = ExtResource("1_h06wa")
+
+[node name="PixilFrame0" type="Sprite2D" parent="."]
+position = Vector2(337, 188.75)
+scale = Vector2(0.3064, 0.27500004)
+texture = ExtResource("2_gbjuw")
+
+[node name="PixilFrame0(1)" type="Sprite2D" parent="."]
+position = Vector2(1067.25, 188.50002)
+scale = Vector2(0.2798, 0.27400002)
+texture = ExtResource("3_dhm8r")
+
+[node name="PixilFrame0(1)2" type="Sprite2D" parent="."]
+position = Vector2(1758, 189.00002)
+scale = Vector2(0.2798, 0.2736)
+texture = ExtResource("3_dhm8r")
+
+[node name="PixilFrame0(1)3" type="Sprite2D" parent="."]
+position = Vector2(2450, 189.50002)
+scale = Vector2(0.2798, 0.2732)
+texture = ExtResource("3_dhm8r")
+flip_h = true
+
+[node name="PixilFrame0(1)4" type="Sprite2D" parent="."]
+position = Vector2(3146, 189.5)
+scale = Vector2(0.2798, 0.2732)
+texture = ExtResource("3_dhm8r")
+
+[node name="PixilFrame0(4)2" type="Sprite2D" parent="."]
+position = Vector2(3049, 867)
+scale = Vector2(0.2798, 0.2728)
+texture = ExtResource("4_x3736")
+
+[node name="PixilFrame0(4)4" type="Sprite2D" parent="."]
+position = Vector2(2359.0002, 859)
+scale = Vector2(0.2798, 0.2728)
+texture = ExtResource("4_x3736")
+flip_h = true
+
+[node name="PixilFrame0(4)5" type="Sprite2D" parent="."]
+position = Vector2(1661, 851.00006)
+scale = Vector2(0.2798, 0.2728)
+texture = ExtResource("4_x3736")
+
+[node name="PixilFrame0(4)3" type="Sprite2D" parent="."]
+position = Vector2(3745.0002, 867)
+scale = Vector2(0.2798, 0.2728)
+texture = ExtResource("4_x3736")
+flip_h = true
+
+[node name="PixilFrame0(5)" type="Sprite2D" parent="."]
+position = Vector2(4425.75, 871)
+scale = Vector2(0.2722001, 0.268)
+texture = ExtResource("5_2vewt")
+
+[node name="PixilFrame0(1)5" type="Sprite2D" parent="."]
+position = Vector2(3842, 190.00002)
+scale = Vector2(0.2798, 0.2728)
+texture = ExtResource("3_dhm8r")
+flip_h = true
+
+[node name="PixilFrame0(7)" type="Sprite2D" parent="."]
+position = Vector2(2965.5002, 1325)
+scale = Vector2(2.0788, 0.62240005)
+texture = ExtResource("6_dhm8r")
 
 [node name="Screenshot20250927135251" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2467, 38)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
 [node name="Screenshot20250927135256" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1313, 38)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
 [node name="Screenshot20250927135257" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(165, 38)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
 [node name="Screenshot20250927135252" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(3619, 38)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
 [node name="Screenshot20250927135253" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(3619, 694)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
 [node name="Screenshot20250927135254" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2470.9998, 694)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
 [node name="Screenshot20250927135255" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1313, 694)
 scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
+
+[node name="ColorRect2" type="Sprite2D" parent="."]
+position = Vector2(197, 298)
+rotation = 3.1415927
+scale = Vector2(1.0832456, -0.93121195)
+texture = ExtResource("2_h1ynw")
 
 [node name="Player" parent="." instance=ExtResource("3_plmuo")]
 position = Vector2(279, 406)
@@ -109,8 +188,8 @@ position = Vector2(783, 418)
 scale = Vector2(0.23148751, 1.316324)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("2_7xuih")]
-position = Vector2(857.99994, 475)
-scale = Vector2(2.615295, 0.51019764)
+position = Vector2(829.99994, 465.99994)
+scale = Vector2(2.5986812, 1.2051493)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("2_7xuih")]
 position = Vector2(1720.0001, 439)
@@ -233,20 +312,21 @@ position = Vector2(232.76367, -47.63501)
 shape = SubResource("RectangleShape2D_h1ynw")
 
 [node name="ColorRect" type="Sprite2D" parent="."]
-position = Vector2(1353, 941)
-scale = Vector2(0.11384879, 0.40936399)
-texture = ExtResource("1_wjvqw")
+position = Vector2(1329.0001, 940)
+scale = Vector2(0.75289905, 0.81827646)
+texture = ExtResource("2_h1ynw")
 
-[node name="ImageRemovebgPreview(10)" type="Sprite2D" parent="."]
-position = Vector2(4607.25, 496.5)
-scale = Vector2(1.2280922, 1.7874252)
-texture = ExtResource("11_h1ynw")
+[node name="PixilFrame0(6)" type="Sprite2D" parent="."]
+position = Vector2(979.75006, 857.99994)
+scale = Vector2(0.26659992, 0.26479992)
+texture = ExtResource("16_gbjuw")
+flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ImageRemovebgPreview(10)"]
-position = Vector2(47.838417, -1.3986607)
-rotation = -3.4732053
-skew = -0.43633232
-shape = SubResource("CapsuleShape2D_jq2hg")
+[node name="PixilFrame0(6)2" type="Sprite2D" parent="."]
+position = Vector2(293.00006, 857.99994)
+scale = Vector2(0.2844315, 0.26479992)
+texture = ExtResource("16_gbjuw")
+flip_h = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_area_2d_body_exited"]
