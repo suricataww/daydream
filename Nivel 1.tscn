@@ -47,13 +47,13 @@ rotation = -0.5651084
 scale = Vector2(2.113654, 1.5628526)
 
 [node name="Node2D4" parent="platforms" instance=ExtResource("4_suadl")]
-position = Vector2(1035, 150)
-scale = Vector2(1.1485775, 1.4291893)
+position = Vector2(1027, 146)
+scale = Vector2(1.1158217, 1.9812124)
 
 [node name="Node2D5" parent="platforms" instance=ExtResource("4_suadl")]
 position = Vector2(1411.9999, 133.99997)
 rotation = 0.39690495
-scale = Vector2(3.207145, 1.7156575)
+scale = Vector2(1.4981719, 2.319262)
 
 [node name="Node2D6" parent="platforms" instance=ExtResource("4_suadl")]
 position = Vector2(1774.9999, 365.99997)
@@ -211,6 +211,13 @@ texture = ExtResource("11_dtf27")
 [node name="PixilFrame014RemovebgPreview(6)" type="Sprite2D" parent="."]
 position = Vector2(259, -618)
 texture = ExtResource("12_n6jh8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 165.0
+offset_top = -517.0
+offset_right = 253.0
+offset_bottom = -494.0
+text = "Press Enter"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

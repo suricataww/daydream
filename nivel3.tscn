@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://e45uqeurgkmb"]
+[gd_scene load_steps=26 format=3 uid="uid://e45uqeurgkmb"]
 
 [ext_resource type="Texture2D" uid="uid://dar5ki72c5wto" path="res://pixil-frame-0 (1).png" id="1_1n6cn"]
 [ext_resource type="Texture2D" uid="uid://c8gu13v2o3d5k" path="res://pixil-frame-0 (4).png" id="2_souud"]
@@ -36,12 +36,6 @@ size = Vector2(124, 244)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_war4a"]
 load_path = "res://.godot/imported/image-removebg-preview (11).png-2aafe48a241e332c32dab29250b7d6f9.ctex"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqoqo"]
-size = Vector2(418.51044, 247.85455)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5vbi"]
-size = Vector2(426.12598, 255.83246)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hr2mb"]
 size = Vector2(417.12866, 250.42072)
@@ -169,6 +163,18 @@ scale = Vector2(0.3383894, 5.41645)
 position = Vector2(2966, 254.00002)
 scale = Vector2(0.42456782, 1.3380369)
 
+[node name="Node2D15" parent="." instance=ExtResource("3_tecg2")]
+position = Vector2(3241, 405)
+scale = Vector2(0.42456782, 1.3380369)
+
+[node name="Node2D28" parent="." instance=ExtResource("3_tecg2")]
+position = Vector2(2917.0002, -177)
+scale = Vector2(0.42456782, 1.3380369)
+
+[node name="Node2D29" parent="." instance=ExtResource("3_tecg2")]
+position = Vector2(1027, 456.00003)
+scale = Vector2(0.42456782, 1.3380369)
+
 [node name="Node2D9" parent="." instance=ExtResource("3_tecg2")]
 position = Vector2(2762, 104.99999)
 scale = Vector2(0.44883862, 1.327663)
@@ -238,17 +244,11 @@ scale = Vector2(0.9948344, 0.9739827)
 position = Vector2(0, 529)
 scale = Vector2(10.44497, 1.2447946)
 
-[node name="Node2D6" parent="." instance=ExtResource("3_tecg2")]
-position = Vector2(5450, -232)
-
 [node name="Node2D26" parent="." instance=ExtResource("3_tecg2")]
 position = Vector2(5016, -314)
 
 [node name="Node2D27" parent="." instance=ExtResource("3_tecg2")]
 position = Vector2(4585, -224)
-
-[node name="Player" parent="." instance=ExtResource("3_ytp32")]
-position = Vector2(120, 388)
 
 [node name="Node" type="Node" parent="."]
 
@@ -283,26 +283,6 @@ script = ExtResource("6_ytp32")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(2830, -538)
 shape = SubResource("RectangleShape2D_o5eqi")
-
-[node name="ImageRemovebgPreview(11)" type="Sprite2D" parent="."]
-position = Vector2(1104.9375, 486.0625)
-scale = Vector2(0.2867312, 0.41556597)
-texture = SubResource("CompressedTexture2D_war4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ImageRemovebgPreview(11)"]
-position = Vector2(-6.757324, -3.7597656)
-scale = Vector2(1, 0.9999997)
-shape = SubResource("RectangleShape2D_sqoqo")
-
-[node name="ImageRemovebgPreview(11)2" type="Sprite2D" parent="."]
-position = Vector2(3321.1252, 469.375)
-scale = Vector2(0.37414616, 0.4632075)
-texture = SubResource("CompressedTexture2D_war4a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ImageRemovebgPreview(11)2"]
-position = Vector2(-7.5966797, 0.80566406)
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_j5vbi")
 
 [node name="ImageRemovebgPreview(11)3" type="Sprite2D" parent="."]
 position = Vector2(3335, 86)
@@ -359,6 +339,9 @@ texture = ExtResource("14_g2xxi")
 position = Vector2(303, 578)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("14_g2xxi")
+
+[node name="Node2D6" parent="." instance=ExtResource("3_tecg2")]
+position = Vector2(5450, -232)
 
 [node name="ImageRemovebgPreview(17)4" type="Sprite2D" parent="."]
 position = Vector2(942, 578)
@@ -446,7 +429,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("15_w8ohj")
 
 [node name="ImageRemovebgPreview(15)12" type="Sprite2D" parent="."]
-position = Vector2(3361, 469)
+position = Vector2(3362, 469)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("15_w8ohj")
 
@@ -488,6 +471,9 @@ texture = ExtResource("17_y84xu")
 position = Vector2(3035, -711)
 texture = ExtResource("18_grpi2")
 
+[node name="Player" parent="." instance=ExtResource("3_ytp32")]
+position = Vector2(113, 392)
+
 [connection signal="body_entered" from="deathzone" to="Player" method="_on_deathzone_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="Player" method="_on_area_2d_2_body_entered"]
-[connection signal="body_exited" from="Area2D2" to="Player" method="_on_area_2d_2_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_area_2d_2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_area_2d_2_body_exited"]

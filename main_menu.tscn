@@ -53,7 +53,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_7vrkn")
 theme_override_font_sizes/font_size = 64
-text = "GAME TITLE"
+text = "A World Away"
 horizontal_alignment = 1
 vertical_alignment = 1
 

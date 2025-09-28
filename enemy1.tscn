@@ -10,6 +10,7 @@ size = Vector2(647, 638)
 size = Vector2(651, 637)
 
 [node name="enemy" type="CharacterBody2D"]
+rotation = 1.5707964
 script = ExtResource("1_g51g3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
