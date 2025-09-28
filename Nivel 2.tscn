@@ -1,10 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://drafgd6db0b5l"]
+[gd_scene load_steps=27 format=3 uid="uid://drafgd6db0b5l"]
 
 [ext_resource type="Texture2D" uid="uid://bkv1mqudrrlou" path="res://pixil-frame-0 (2).png" id="1_h06wa"]
 [ext_resource type="Texture2D" uid="uid://mv8kdnetwfem" path="res://Screenshot 2025-09-27 135250.png" id="1_og30x"]
 [ext_resource type="PackedScene" uid="uid://661gymkb8504" path="res://baseplatform.tscn" id="2_7xuih"]
 [ext_resource type="Texture2D" uid="uid://bdtgcrvbf8qdi" path="res://pixil-frame-0.png" id="2_gbjuw"]
-[ext_resource type="Texture2D" uid="uid://c8gdgdh32gd53" path="res://image-removebg-preview (14).png" id="2_h1ynw"]
 [ext_resource type="Texture2D" uid="uid://dar5ki72c5wto" path="res://pixil-frame-0 (1).png" id="3_dhm8r"]
 [ext_resource type="PackedScene" uid="uid://8ehf8ahyr5l2" path="res://jucator.tscn" id="3_plmuo"]
 [ext_resource type="Texture2D" uid="uid://c8gu13v2o3d5k" path="res://pixil-frame-0 (4).png" id="4_x3736"]
@@ -20,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://b1fnc175rlxaw" path="res://image-removebg-preview (16).png" id="18_2ci8d"]
 [ext_resource type="Texture2D" uid="uid://c01joo0lq3rwv" path="res://image-removebg-preview (15).png" id="19_v5aca"]
 [ext_resource type="Texture2D" uid="uid://durl4pvprye4j" path="res://image-removebg-preview (17).png" id="20_rfhvc"]
+[ext_resource type="Texture2D" uid="uid://nlrbcej4ojhy" path="res://pixil-frame-0__15_-removebg-preview.png" id="20_v5aca"]
+[ext_resource type="Texture2D" uid="uid://bjvrld8qn0if1" path="res://pixil-frame-0__14_-removebg-preview (6).png" id="21_rfhvc"]
 
 [sub_resource type="Curve2D" id="Curve2D_2pc3p"]
 _data = {
@@ -169,12 +170,6 @@ scale = Vector2(1.175, 1.1)
 texture = ExtResource("1_og30x")
 centered = false
 
-[node name="ColorRect2" type="Sprite2D" parent="."]
-position = Vector2(197, 298)
-rotation = 3.1415927
-scale = Vector2(1.0832456, -0.93121195)
-texture = ExtResource("2_h1ynw")
-
 [node name="Player" parent="." instance=ExtResource("3_plmuo")]
 position = Vector2(279, 406)
 
@@ -313,11 +308,6 @@ script = ExtResource("10_wjvqw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(232.76367, -47.63501)
 shape = SubResource("RectangleShape2D_h1ynw")
-
-[node name="ColorRect" type="Sprite2D" parent="."]
-position = Vector2(1329.0001, 940)
-scale = Vector2(0.75289905, 0.81827646)
-texture = ExtResource("2_h1ynw")
 
 [node name="PixilFrame0(6)" type="Sprite2D" parent="."]
 position = Vector2(979.75006, 857.99994)
@@ -610,6 +600,15 @@ texture = ExtResource("19_v5aca")
 position = Vector2(4114.0005, 1137.0001)
 scale = Vector2(0.42, 0.42)
 texture = ExtResource("19_v5aca")
+
+[node name="PixilFrame015RemovebgPreview" type="Sprite2D" parent="."]
+position = Vector2(369, 255)
+scale = Vector2(0.872, 0.88)
+texture = ExtResource("20_v5aca")
+
+[node name="PixilFrame014RemovebgPreview(6)" type="Sprite2D" parent="."]
+position = Vector2(1572, 844)
+texture = ExtResource("21_rfhvc")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_area_2d_body_exited"]

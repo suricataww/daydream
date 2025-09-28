@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnr0bqflxd32j"]
+[gd_scene load_steps=14 format=3 uid="uid://cnr0bqflxd32j"]
 
 [ext_resource type="Texture2D" uid="uid://c8gdgdh32gd53" path="res://image-removebg-preview (14).png" id="2_oyj17"]
 [ext_resource type="PackedScene" uid="uid://8ehf8ahyr5l2" path="res://jucator.tscn" id="3_oyj17"]
@@ -10,17 +10,24 @@
 [ext_resource type="Texture2D" uid="uid://dbeveohubljyt" path="res://pixil-frame-0 (9).png" id="8_n6jh8"]
 [ext_resource type="Texture2D" uid="uid://dar5ki72c5wto" path="res://pixil-frame-0 (1).png" id="9_pkugv"]
 [ext_resource type="Texture2D" uid="uid://by4j2kupi04wa" path="res://pixil-frame-0 (10).png" id="10_y840c"]
+[ext_resource type="Texture2D" uid="uid://nlrbcej4ojhy" path="res://pixil-frame-0__15_-removebg-preview.png" id="11_dtf27"]
+[ext_resource type="Texture2D" uid="uid://bjvrld8qn0if1" path="res://pixil-frame-0__14_-removebg-preview (6).png" id="12_n6jh8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_012ah"]
 size = Vector2(116.25, 262)
 
 [node name="Nivel1" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-657.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(35, -517)
 rotation = 3.1415927
 scale = Vector2(0.9788806, -0.82715803)
 texture = ExtResource("2_oyj17")
+
+[node name="PixilFrame0(7)8" type="Sprite2D" parent="."]
+position = Vector2(-566, 1237)
+texture = ExtResource("5_6o5cf")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(35, 390)
@@ -94,13 +101,6 @@ position = Vector2(550, -313)
 [node name="Node2D17" parent="platforms" instance=ExtResource("4_suadl")]
 position = Vector2(2, -378)
 scale = Vector2(1.4237932, 1.2468961)
-
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("5_3mvlh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(32, -507)
-shape = SubResource("RectangleShape2D_012ah")
 
 [node name="PixilFrame0(7)" type="Sprite2D" parent="."]
 position = Vector2(352.99997, 730)
@@ -193,8 +193,24 @@ position = Vector2(3135.9998, -622)
 scale = Vector2(0.28640008, 0.273)
 texture = ExtResource("10_y840c")
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_3mvlh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(58, -497)
+shape = SubResource("RectangleShape2D_012ah")
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_oyj17")]
 position = Vector2(50, 490)
+
+[node name="PixilFrame015RemovebgPreview" type="Sprite2D" parent="."]
+position = Vector2(192.00002, 373)
+scale = Vector2(0.704, 0.674)
+texture = ExtResource("11_dtf27")
+
+[node name="PixilFrame014RemovebgPreview(6)" type="Sprite2D" parent="."]
+position = Vector2(259, -618)
+texture = ExtResource("12_n6jh8")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://e45uqeurgkmb"]
+[gd_scene load_steps=28 format=3 uid="uid://e45uqeurgkmb"]
 
 [ext_resource type="Texture2D" uid="uid://dar5ki72c5wto" path="res://pixil-frame-0 (1).png" id="1_1n6cn"]
 [ext_resource type="Texture2D" uid="uid://c8gu13v2o3d5k" path="res://pixil-frame-0 (4).png" id="2_souud"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://durl4pvprye4j" path="res://image-removebg-preview (17).png" id="14_g2xxi"]
 [ext_resource type="Texture2D" uid="uid://c01joo0lq3rwv" path="res://image-removebg-preview (15).png" id="15_w8ohj"]
 [ext_resource type="Texture2D" uid="uid://b1fnc175rlxaw" path="res://image-removebg-preview (16).png" id="16_souud"]
+[ext_resource type="Texture2D" uid="uid://nlrbcej4ojhy" path="res://pixil-frame-0__15_-removebg-preview.png" id="17_y84xu"]
+[ext_resource type="Texture2D" uid="uid://bjvrld8qn0if1" path="res://pixil-frame-0__14_-removebg-preview (6).png" id="18_grpi2"]
 
 [sub_resource type="Curve2D" id="Curve2D_8vsvm"]
 _data = {
@@ -27,10 +29,10 @@ point_count = 63
 size = Vector2(105.86665, 19.330814)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_piiay"]
-size = Vector2(44, 303)
+size = Vector2(131, 303)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5eqi"]
-size = Vector2(38, 194)
+size = Vector2(124, 244)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_war4a"]
 load_path = "res://.godot/imported/image-removebg-preview (11).png-2aafe48a241e332c32dab29250b7d6f9.ctex"
@@ -48,6 +50,12 @@ size = Vector2(417.12866, 250.42072)
 size = Vector2(299.2284, 162.00664)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="PixilFrame0(7)3" type="Sprite2D" parent="."]
+position = Vector2(3178.686, 533.3374)
+rotation = 1.57994
+scale = Vector2(0.4491146, 3.0923328)
+texture = ExtResource("4_y84xu")
 
 [node name="PixilFrame0(1)" type="Sprite2D" parent="."]
 position = Vector2(338.99997, -400.75)
@@ -266,14 +274,14 @@ shape = SubResource("RectangleShape2D_tecg2")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(27, 298)
+position = Vector2(47.5, 298)
 shape = SubResource("RectangleShape2D_piiay")
 
 [node name="Area2D2" type="Area2D" parent="."]
 script = ExtResource("6_ytp32")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(2787, -563)
+position = Vector2(2830, -538)
 shape = SubResource("RectangleShape2D_o5eqi")
 
 [node name="ImageRemovebgPreview(11)" type="Sprite2D" parent="."]
@@ -471,6 +479,14 @@ texture = ExtResource("15_w8ohj")
 position = Vector2(3335, 106)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("15_w8ohj")
+
+[node name="PixilFrame015RemovebgPreview" type="Sprite2D" parent="."]
+position = Vector2(186, 206)
+texture = ExtResource("17_y84xu")
+
+[node name="PixilFrame014RemovebgPreview(6)" type="Sprite2D" parent="."]
+position = Vector2(3035, -711)
+texture = ExtResource("18_grpi2")
 
 [connection signal="body_entered" from="deathzone" to="Player" method="_on_deathzone_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="Player" method="_on_area_2d_2_body_entered"]

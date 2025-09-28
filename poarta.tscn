@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dltyqlfbwvaqd"]
+
+[ext_resource type="Texture2D" uid="uid://b1onmfsowu035" path="res://pixil-frame-0 (11).png" id="1_54dgm"]
+
+[sub_resource type="SystemFont" id="SystemFont_c7wku"]
+font_names = PackedStringArray("Gloucester MT")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_54dgm")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "Next
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_c7wku")
+theme_override_font_sizes/font_size = 40
+text = "I have been sent on a mission to get back 
+the magic heart of my city. This is a dangerous 
+quest, so you must help me. Choose wisely, 
+as your actions may cost your chances of winning!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 128
