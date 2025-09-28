@@ -26,7 +26,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func killPlayer():
-	position = %respawn.position
+	var respawn: Node2D = get_tree().current_scene.get_node_or_null("respawn")
+	if respawn:
+		position = respawn.position
+	else:
+		push_warning("No respawn node found in this level!")
 
 func _ready():
 	if Global.speed_upgrade:

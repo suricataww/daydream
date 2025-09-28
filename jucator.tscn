@@ -7,7 +7,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8eepy"]
 size = Vector2(776.7577, 1079.6316)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+position = Vector2(-1, -2)
 script = ExtResource("1_pdocr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -16,7 +17,7 @@ texture = ExtResource("2_p6no6")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8.499999, 13.5)
+position = Vector2(7.999999, 12.000001)
 rotation = -3.1415925
 scale = Vector2(0.07080715, -0.09725539)
 shape = SubResource("RectangleShape2D_8eepy")

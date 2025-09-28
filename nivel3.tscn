@@ -227,8 +227,8 @@ position = Vector2(108, 433)
 scale = Vector2(0.9948344, 0.9739827)
 
 [node name="Node2D" parent="." instance=ExtResource("3_tecg2")]
-position = Vector2(5, 508)
-scale = Vector2(11.398989, 4.527755)
+position = Vector2(0, 529)
+scale = Vector2(10.44497, 1.2447946)
 
 [node name="Node2D6" parent="." instance=ExtResource("3_tecg2")]
 position = Vector2(5450, -232)
@@ -436,6 +436,11 @@ texture = ExtResource("15_w8ohj")
 
 [node name="ImageRemovebgPreview(15)6" type="Sprite2D" parent="."]
 position = Vector2(3082, 322)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_w8ohj")
+
+[node name="ImageRemovebgPreview(15)12" type="Sprite2D" parent="."]
+position = Vector2(3361, 469)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("15_w8ohj")
 
